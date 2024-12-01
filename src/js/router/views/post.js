@@ -1,8 +1,7 @@
-import { initializePostsPage } from "../../ui/post/initializePostTemplate";
-import { initializeSearch } from "../../ui/post/initializeSearch";
+import { initializePostsPage } from "../../ui/post/initliazePostTemplate";
+initializePostsPage
 
 document.addEventListener("DOMContentLoaded", () => {
     initializePostsPage();
-    initializeSearch();
 });
 
