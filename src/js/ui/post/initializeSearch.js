@@ -32,9 +32,6 @@ export async function initializeSearch() {
             return; 
         }
 
-        console.log("Search Type:", searchType); 
-        console.log("Search Query Before Trim:", searchQuery); 
-
         try {
             
             await searchByPost({

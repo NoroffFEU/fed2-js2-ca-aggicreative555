@@ -33,8 +33,6 @@ export async function initializePostsPage() {
     } else {
         try {
             const { data: posts } = await readMultiplePosts(12, 1);
-
-            console.log(posts)
             
             renderMultiplePosts(posts, postsContainer);
 

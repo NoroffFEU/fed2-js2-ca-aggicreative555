@@ -44,8 +44,6 @@ export async function searchByPost({ query, searchType, postsContainer, page = 1
             throw new Error("Invalid search type.");
         }
 
-        console.log("Constructed API URL:", apiUrl);
-
         const response = await getHeaders(apiUrl, {
             method: "GET",
         });

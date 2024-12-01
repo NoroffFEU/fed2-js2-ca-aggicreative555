@@ -20,6 +20,7 @@ export function onLogin() {
 
             login(profile);
             alert("Login successful!");
+            window.location.href = "/post/";
         })
     } else {
         throw new Error("Login form not found.")

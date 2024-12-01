@@ -14,7 +14,6 @@ export function onRegister() {
     try {
 
         if (form) {
-            console.log("Form found:", form);
             form.addEventListener("submit", (event) => {
                 event.preventDefault();
                 const form = event.target;
