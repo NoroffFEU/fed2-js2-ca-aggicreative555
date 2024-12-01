@@ -29,45 +29,48 @@
 
 
 export function postTemplate(postData) {
+    const data = postData.data || postData;
+
     const post = document.createElement("div");
     post.classList.add("post");
 
     // Add title
     const title = document.createElement("h2");
-    title.innerText = postData.title;
+    title.innerText = data.title;
     post.appendChild(title);
 
     // Add body
     const body = document.createElement("p");
-    body.innerText = postData.body;
+    body.innerText = data.body;
     post.appendChild(body);
 
     // Add media if available
-    if (postData.media?.url) {
+    if (data.media?.url) {
         const media = document.createElement("img");
-        media.src = postData.media.url;
-        media.alt = postData.media.alt || "Post image";
+        media.src = data.media.url;
+        media.alt = data.media.alt || "Post image";
         post.appendChild(media);
     }
 
     // Add tags if available
-    if (postData.tags?.length > 0) {
+    if (data.tags?.length > 0) {
         const tags = document.createElement("p");
-        tags.innerText = `Tags: ${postData.tags.join(",")}`;
+        tags.innerText = `Tags: ${data.tags.join(",")}`;
         post.appendChild(tags);
     }
 
+
     // Add comments count if available
-    if (postData._count?.comments !== undefined) {
+    if (data._count?.comments !== undefined) {
         const commentCount = document.createElement("p");
-        commentCount.innerText = `Comments: ${postData._count?.comments}`;
+        commentCount.innerText = `Comments: ${data._count?.comments}`;
         post.appendChild(commentCount);
     }
 
     // Add reaction count if available
-    if (postData._count?.reactions !== undefined) {
+    if (data._count?.reactions !== undefined) {
         const reactionCount = document.createElement("p");
-        reactionCount.innerText = `Reactions: ${postData._count?.reactions}`;
+        reactionCount.innerText = `Reactions: ${data._count?.reactions}`;
         post.appendChild(reactionCount);
     }
 
@@ -88,6 +91,7 @@ export function postTemplate(postData) {
 export function renderPostTemplate(postData, parent) {
     parent.innerHTML = "";
     parent.append(postTemplate(postData));
+    console.log(postData);
 }
 
 export function renderMultiplePosts(posts, parent) {
