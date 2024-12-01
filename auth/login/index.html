@@ -10,8 +10,8 @@
 
   <body>
     <h1>Login</h1>
-    <form name="login">
-      <div>
+    <form name="login" action="/profile" method="GET"> 
+      <div> 
         <label for="email">Email</label>
         <input id="email" type="email" name="email" required />
       </div>
@@ -22,7 +22,7 @@
       </div>
 
       <a href="/auth/register/">Register</a>
-      <button>Login</button>
+      <button type="submit">Login</button>
     </form>
   </body>
 </html>

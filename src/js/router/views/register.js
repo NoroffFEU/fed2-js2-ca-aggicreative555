@@ -1,5 +1,13 @@
-import { onRegister } from "../../ui/auth/register";
+import { onRegister } from "../../ui/auth/register.js";
 
 const form = document.forms.register;
 
-form.addEventListener("submit", onRegister);
+console.log('register form detected', form);
+
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log("form submitted");
+
+    onRegister(event);
+});
