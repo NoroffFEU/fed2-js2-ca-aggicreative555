@@ -7,12 +7,32 @@
     <title>Noroff FED2 JS2 CA</title>
     <script type="module" src="/src/app.js"></script>
   </head>
-
   <body>
-    <h1>Edit Post</h1>
-
-    <form name="editPost">
-      <button>Edit Post</button>
-    </form>
+    <nav class="nav-bar"></nav>
+      <a href="/">Home</a>
+      <a href="/profile/">My Profile</a>
+      <button id="logoutButton">Logout</button>
+    </nav>
+    <h1>Edit Post Page</h1>
+    <form name="updatePost" id="updatePost">
+    
+    <label for="title">Post Title</label>
+    <input type="text" name="title" id="title" placeholder="Title">
+    
+    <label for="content">Content</label>
+    <textarea name="body" id="body" placeholder="Content" cols="30" rows="10"></textarea>
+    
+    <label for="url">Add image url</label>
+    <input type="url" name="mediaUrl" id="mediaUrl" placeholder="url">
+    
+    <label for="alt">Add image alt text</label>
+    <input type="text" name="mediaAlt" id="mediaAlt" placeholder="alt">
+    
+    <button type="submit" id="updateButton">Update Post</button>
+    <button id="deleteButton">Delete Post</button>
+    <a href="../../auth/login/">Login</a>
+  </form>
+  <script type="module" src="/src/app.js"></script>
+  <script type="module" src="/src/js/router/views/postEdit.js"></script>
   </body>
 </html>
