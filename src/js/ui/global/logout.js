@@ -12,8 +12,6 @@ export function setLogoutListener() {
     try {
         const logoutButton = document.querySelector("#logoutButton");
     
-        console.log(logoutButton);
-    
         if (logoutButton) {
             logoutButton.addEventListener("click", onLogout);
         } else {
