@@ -1,27 +1,32 @@
-import {register} from "../../api/auth/register.js";
+import { register } from "../../api/auth/register";
 
-export async function onRegister(event) {
-    event.preventDefault();
+/**
+ * Handles the register form submission by passing data to the register function.
+ * 
+ * @function onLogin
+ * @param {Event} event - Form submission event.
+ * @throws {Error} If register form is missing in the DOM.
+ */  
 
-    const form = event.target;
-    
-    const formData = {
-        name: form.name.value,
-        email: form.email.value,
-        password: form.password.value,
-        bio: '',
-        avatar: '',
-        banner: '',
-    };
+export function onRegister() {
+    const form = document.querySelector("#registerForm");
 
     try {
-        const result = await register(formData);
-        console.log('Registration successful:', result);
-        alert("Registration failed:", error);
+
+        if (form) {
+            console.log("Form found:", form);
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                const form = event.target;
+                const formData = new FormData(form);
+                const profile = Object.fromEntries(formData);
+    
+                register(profile);
+                alert("User registered successfully!");
+            })
+        }
 
     } catch (error) {
-        console.log('Registration failed:', error);
-        alert("Registration failed:", error);
-
+        console.error("Register form not found", error);
     }
 }
