@@ -5,31 +5,32 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="../../src/js/router/views/login.js" defer></script>
-    <script type="module" src="/src/app.js" defer></script>
   </head>
-
+  
   <body>
     <nav class="nav-bar"></nav>
-      <a href="/">Home</a>
-      <a href="/profile/">My Profile</a>
-      <button id="logoutButton">Logout</button>
-    </nav>
-    <h1>Login</h1>
-    <form name="login" id="loginForm">
-      <div>
-        <label for="email">Email</label>
+    <a href="/">Home</a>
+    <a href="/profile/">My Profile</a>
+    <button id="logoutButton">Logout</button>
+  </nav>
+  <h1>Login</h1>
+  <form name="login" id="loginForm">
+    <div>
+      <label for="email">Email</label>
         <input id="email" type="email" name="email" required />
       </div>
-
+      
       <div>
         <label for="password">Password</label>
         <input type="password" name="password" id="password" required />
       </div>
-
+      
       <a href="/auth/register/">Register</a>
       <button>Login</button>
     </form>
+    <script type="module" src="../../src/js/router/views/login.js" defer></script>
+    <script type="module" src="/src/app.js" defer></script>
   </body>
-</html>
-
+  </html>
+  
+  
