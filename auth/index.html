@@ -5,10 +5,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
   </head>
   <body>
+    <nav class="nav-bar"></nav>
+      <a href="/">Home</a>
+      <a href="/profile/">My Profile</a>
+      <button id="logoutButton">Logout</button>
+    </nav>
     <h1>Auth</h1>
     <a href="./login/">Login</a> or <a href="./register/">Register</a>
+    <script type="module" src="/src/app.js"></script>
+    <script type="module" src="/src/js/router/views/auth.js"></script>
   </body>
 </html>
