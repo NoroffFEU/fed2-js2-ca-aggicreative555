@@ -1,11 +1,11 @@
 # Redirect all API calls to the Noroff API, effectively bypassing CORS issues
-/auth/create-api-key*    https://api.noroff.dev/auth/create-api-key:splat   200
-/auth/login*    https://api.noroff.dev/auth/login:splat   200
-/auth/register*    https://api.noroff.dev/auth/register:splat   200
-/social/posts/*    https://api.noroff.dev/social/posts/:splat   200
-/social/posts/search*    https://api.noroff.dev/social/posts/search:splat 200
-/social/posts/following*    https://api.noroff.dev/social/posts/following:splat 200
-/social/profiles*    https://api.noroff.dev/social/profiles:splat 200
+/auth/create-api-key*    https://v2.api.noroff.dev/auth/create-api-key:splat   200
+/auth/login*    https://v2.api.noroff.dev/auth/login:splat   200
+/auth/register*    https://v2.api.noroff.dev/auth/register:splat   200
+/social/posts/*    https://v2.api.noroff.dev/social/posts/:splat   200
+/social/posts/search*    https://v2.api.noroff.dev/social/posts/search:splat 200
+/social/posts/following*    https://v2.api.noroff.dev/social/posts/following:splat 200
+/social/profiles*    https://v2.api.noroff.dev/social/profiles:splat 200
 
 # Catch-all redirect for any other routes (SPA)
 */index.html   200
